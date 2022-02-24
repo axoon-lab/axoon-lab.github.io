@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Axoon Labs | By Alexandre Hebert</title>
+  <meta name="description" content="Axoon Labs by Alexandre Hebert" />
+  <link rel="icon" type="image/png" href="ring.png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 25px;
+    }
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .axoon {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: .5s ease-in-out all;
+    }
+    .signature-wrapper {
+      position: fixed;
+    }
+    .signature-wrapper.bottom {
+      bottom: 0;
+      right: 0;
+    }
+    .signature {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      opacity: 0;
+      margin: 1rem;
+      transition: .5s ease-in-out all;
+    }
+    .ring {
+      transition: .5s ease-in-out all;
+      width: 121px;
+      height: 121px;
+      transform: rotate(-25deg);
+    }
+    .by {
+      padding: 1rem;
+    }
+    .logo-wrapper {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200vw;
+      margin-left: -60vw;
+      top: 40vh;
+      transform: rotate(-5deg);
+      transition: .5s ease-in-out all;
+    }
+    .logo {
+      position: relative;
+      display: flex;
+      padding: 5rem;
+      background-color: #EEE;
+      width: 100%;
+      justify-content: center;
+      transition: .5s ease-in-out all;
+    }
+    .mask {
+      height: 100%;
+      border-radius: 5rem;
+      overflow: hidden;
+      margin-left: -.5rem;
+    }
+    .o-o {
+      display: flex;
+      height: 100%;
+      animation: rotating .5s linear infinite;
+    }
+    .letter {
+      padding: 0 0.2rem;
+    }
+    .axoon:hover {
+      background-color: #EEE;
+    }
+    .axoon:hover .logo {
+      background-color: rgba(238, 238, 238, 0);
+    }
+    .axoon:hover .logo-wrapper {
+      top: 35vh;
+      transform: rotate(0deg);
+      margin-left: -50vw;
+    }
+    .axoon:hover .signature {
+      opacity: 1;
+    }
+    .axoon:hover .signature .ring {
+      transform: rotate(0deg);
+    }
+  </style>
+</head>
+<body>
+<div class="axoon">
+  <div class="signature-wrapper">
+    <div class="signature">
+      <img class="ring" alt="º" src="ring.png" />
+      <div class="by">by Alexandre Hebert</div>
+    </div>
+  </div>
+  <div class="logo-wrapper">
+    <div class="logo">
+      <img class="letter" alt="a" src="a.png" />
+      <img class="letter" alt="x" src="x.png" />
+      <div class="mask">
+        <div class="o-o">
+          <div class="letter o"><img alt="º" src="ring.png" /></div>
+          <div class="letter o"><img alt="º" src="ring.png" /></div>
+        </div>
+      </div>
+      <img class="letter" alt="n" src="n.png" />
+    </div>
+  </div>
+  <div class="signature-wrapper bottom">
+    <div class="signature">
+      <div class="by">by Alexandre Hebert</div>
+      <img class="ring" alt="º" src="ring.png" />
+    </div>
+  </div>
+</div>
+</body>
+</html>
